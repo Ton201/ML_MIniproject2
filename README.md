@@ -1,5 +1,5 @@
 # Machine Learning Miniproject 2: IMDB movie review sentiment classification
-### Antonin Reh (https://github.com/Ton201), 2025
+Antonin Reh (https://github.com/Ton201), 2025
 
 ## Introduction
 The dataset under consideration contains a total of 50,000 movie reviews
@@ -64,8 +64,10 @@ It was decided to experiment with logistic regresion for its great clasification
 <br/>
 Next step was the tuning of regularisation parameter weight. Several screenings were performed in incrementally narrowing range of values. The optimal regularisation weight **C** was approximately **4.316** with coresponding validation accuracy **0.8917**. Graphical ilustration of the training process can be seen in fig. 1 and 2.
 
-![Fig. 1: Logistic regression trainnig]('./images/lr_training.png')
-![Fig. 2: Logistic regression trainnig - detailed]('./images/lr_training_detailed.png')
+![Logistic regression trainnig](./images/lr_training.png)
+
+
+![Logistic regression trainnig - detailed](./images/lr_training_detailed.png)
 
 
 ### Artificail neural network
@@ -73,7 +75,7 @@ Last modelling approach taken into a count was Artificail neural networs. These 
 <br/>
 The second mentioned one proved to be the biggest obstacle in this task. Despite the drop out, it reached the training accuracy of 1.00 after 10 epochs, with underperforming validation accuracy of 0.8643. Graphical ilustration of the training process can be seen in fig. 4.
 
-![Fig. 3: NN trainnig]('./images/nn_training.png')
+![First NN trainnig](./images/nn1_training.png)
 
 <br/>
 The second NN model was modified to accomodate for this problem. Modification were as follows:
@@ -83,7 +85,7 @@ The second NN model was modified to accomodate for this problem. Modification we
 
 Despite modfication the second model reachedthe trainning accuracy of 0.9995 after 6 epochs, than the training cycle expirienced a crash. Obtaine validation accuracy after 10 epochs was 0.8717. The result was worse than the logistic regression model with added complexity and potential of overfitting. Therefore NN exploration ended in this step. Graphical ilustration of the training process can be seen in fig. 4.
 
-![Fig. 4: NN trainnig - detailed]('./images/nn_training_detailed.png')
+![Second NN trainnig](./images/nn2_training.png)
 
 ## Coclusions
 The best performing model was tuned Logistic Regression. Full comparinson of the model perfomances can be seen in table 2. This modle was used on testing set resulting in test accuracy of 0.8962 which is an excelent result as far as generalisation is concerened. The goal of this assignement was to obtain accuracy of at least 0.85. This goal was fullfilled. Model perfomance did not change significantly in comparison with validation. The model is not overfitted and most likely used all the pottential of provided data. However, the performance could be possibly further improved with more data preparation. Examples could be filtering html tags from raw texts, removing stop words custom stip words or tuning the maximal and minimum uccurence counts. Maybe experiment with possiblity of using two consecutive words as tokens could add more informative value that could be than levared by more complex models such as NN. This would however require  more cumputational power. NN models were overall underperforming in this task. With more time and resources the NN model could be most likely improved.
